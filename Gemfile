@@ -50,3 +50,4 @@ gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '~> 2.3'
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'bcrypt'
