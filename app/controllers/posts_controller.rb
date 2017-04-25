@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   def create
     if logged_in?
       @post = Post.create post_params
+      @post.user = current_user
       if @post.save
         redirect_to :action => :index
       else

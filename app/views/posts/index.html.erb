@@ -2,9 +2,8 @@
 	<% @posts.each do |post| %>
 		<div class='post'>
 			<div class='image-header'>
-				<div class='username'>
-					Kieraj Mumick
-				</div>
+				<img class='profile-pic' src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTKY4wrF0a3Ga7QyJ-V6r7A3DY5nwCxKucLBNqbG5gW_IGdJitMJsq1ir8' width="30px" height="30px">
+				<%= link_to post.user.username, user_path(post.user) %>
 			</div>
 			<div class='post-image'>
 				<%= link_to (image_tag post.image.url(:size)), post_path(post) %>

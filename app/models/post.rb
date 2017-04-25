@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
 	belongs_to :user
 	validates :image, presence: true
+	validates :user_id, presence: true
 
 	# Let Paperclip know that this requires an attached file, and resize that image to the width provided.
 	# The resizing is handled by ImageMagick.

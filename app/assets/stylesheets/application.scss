@@ -33,17 +33,30 @@ body {
 	margin-bottom: 44px;
 	border-radius: 3px;
 	border: 1px solid rgb(230, 230, 230);
-}
 
-.image-header {
-	padding: 14px;
-}
+	.image-header {
+		a {
+			font-weight: 500;
+			color: #444;
+		}
 
-.post-image {
-}
+		padding: 14px;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
 
-.image-footer {
-	padding: 14px;
+		img.profile-pic {
+			border-radius: 15px;
+			margin-right: 10px;
+		}
+	}
+
+	.post-image {
+	}
+
+	.image-footer {
+		padding: 14px;
+	}
 }
 
 .cards-wrapper {
