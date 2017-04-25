@@ -12,6 +12,9 @@
 				<div class='caption'>
 					<%= post.caption %>
 				</div>
+				<div class='edit-options'>
+					<%= link_to 'Like', new_post_like_path(post) %>
+				</div>
 			</div>
 		</div>
 	<% end %>
