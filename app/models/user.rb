@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true, length: { minimum: 2 }
   validates :email, presence: true
-  validates :username, presence: true, length: {minimum: 3}
+  validates :username, presence: true, uniqueness: true, length: {minimum: 3}
 
   include BCrypt
 
