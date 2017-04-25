@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background-color: rgb(250, 250, 250);
+}
+
+.posts-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.post {
+	flex-direction: row;
+
+	background-color: white;
+
+	margin-bottom: 44px;
+	border-radius: 3px;
+	border: 1px solid rgb(230, 230, 230);
+}
+
+.image-header {
+	padding: 14px;
+}
+
+.post-image {
+}
+
+.image-footer {
+	padding: 14px;
+}
+
+.cards-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.center-card {
+	background-color: white;
+	padding: 30px;
+	border-radius: 3px;
+	border: 1px solid rgb(230, 230, 230);
+}

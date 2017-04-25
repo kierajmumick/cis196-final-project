@@ -1,0 +1,19 @@
+<div class='posts-wrapper'>
+	<% @posts.each do |post| %>
+		<div class='post'>
+			<div class='image-header'>
+				<div class='username'>
+					Kieraj Mumick
+				</div>
+			</div>
+			<div class='post-image'>
+				<%= link_to (image_tag post.image.url(:size)), post_path(post) %>
+			</div>
+			<div class='image-footer'>
+				<div class='caption'>
+					<%= post.caption %>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

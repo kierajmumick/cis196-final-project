@@ -1,0 +1,12 @@
+<div class='cards-wrapper'>
+	<div class='center-card'>
+		<h1>Upload New Photo</h1>
+		<%= simple_form_for @post, url: posts_path do |form| %>
+			<%= form.input :image, as: :file %>
+			<br>
+			<%= form.input :caption %>
+			<br>
+			<%= form.button :submit %>
+		<% end %>
+	</div>
+</div>

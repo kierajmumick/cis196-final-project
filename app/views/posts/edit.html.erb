@@ -1,0 +1,15 @@
+<div class='cards-wrapper'>
+	<div class='center-card'>
+		<h1>Edit Caption</h1>
+		<div class='post-image'>
+			<%= image_tag @post.image.url(:size) %>
+		</div>
+		<%= simple_form_for @post do |form| %>
+			<%= form.input :image %>
+			<br>
+			<%= form.input :caption %>
+			<br>
+			<%= form.button :submit %>
+		<% end %>
+	</div>
+</div>

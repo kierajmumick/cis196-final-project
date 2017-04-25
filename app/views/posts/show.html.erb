@@ -1,0 +1,23 @@
+<div class='posts-wrapper'>
+	<div class='post'>
+		<div class='image-header'>
+			<div class='username'>
+				Kieraj Mumick
+			</div>
+		</div>
+
+		<div class='post-image'>
+			<%= image_tag @post.image.url(:size) %>
+		</div>
+		
+		<div class='image-footer'>
+			<div class='caption'>
+				<%= @post.caption %>
+			</div>
+			<div class='edit-options'>
+				<%= link_to 'Edit', edit_post_path(@post) %>
+				<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Confirm delete' } %>
+			</div>
+		</div>
+	</div>
+</div>
