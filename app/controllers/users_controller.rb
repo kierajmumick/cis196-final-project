@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.all
+    if logged_in?
+      @users = User.all
+    else
+      redirect_to login_path
+    end
   end
 
   def new
@@ -14,7 +18,7 @@ class UsersController < ApplicationController
     @user.password = params[:user][:password]
 
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      redirect_to login_path
     else
       render :new
     end
@@ -28,18 +32,26 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+    if logged_in?
+      if @user.update(user_params)
+        redirect_to @user, notice: 'User was successfully updated.'
+      else
+        render :edit
+      end
     else
-      render :edit
+      redirect_to login_path
     end
   end
 
   # DELETE /users/1
   def destroy
-    @user.destroy
-    reset_session
-    redirect_to users_url, notice: 'User was successfully destroyed.'
+    if logged_in?
+      @user.destroy
+      reset_session
+      redirect_to users_url, notice: 'User was successfully destroyed.'
+    else
+      redirect_to login_path
+    end
   end
 
 

@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   include BCrypt
   def new
-    redirect_to login_path
   end
 
   def create
