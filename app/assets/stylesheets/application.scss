@@ -46,7 +46,7 @@ body {
 		align-items: center;
 
 		img.profile-pic {
-			border-radius: 15px;
+			border-radius: 12px;
 			margin-right: 10px;
 		}
 	}
@@ -66,10 +66,28 @@ body {
 			}
 
 			a {
-				font-size: 15px;
+				font-size: 12px;
 				color: #007acc;
 			}
 		}
+
+		.comments {
+			.comment {
+				a.username {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+form.new_comment {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	input {
+		width: 100%;
+		padding: 4px;
+		padding-left: 10px;
 	}
 }
 

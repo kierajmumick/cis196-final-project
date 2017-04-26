@@ -25,6 +25,19 @@
 			<div class='caption'>
 				<%= @post.caption %>
 			</div>
+			<div class='comments'>
+				<% if @post.comments.size > 0 %>
+					<% @post.comments.each do |comment| %>
+						<div class='comment'>
+							<%= link_to comment.user.username, user_path(comment.user), {class: 'username'} %>
+							<%= comment.content %>
+						</div>
+					<% end %>
+				<% end %>
+				<%= form_for [@post, @post.comments.new] do |form| %>
+					<%= form.text_field :content, placeholder: 'Comment...' %>
+				<% end %>
+			</div>
 			<% if current_user == @post.user %>
 				<div class='edit-options'>
 					<%= link_to 'Edit', edit_post_path(@post) %>
