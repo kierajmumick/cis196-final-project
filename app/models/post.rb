@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 
 	has_many :likes, dependent: :destroy
 	has_many :user_likes, source: :user, through: :likes
+	has_many :comments, dependent: :destroy
 
 	validates :image, presence: true
 	validates :user_id, presence: true

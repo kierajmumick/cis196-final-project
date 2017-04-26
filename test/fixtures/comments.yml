@@ -3,9 +3,9 @@
 one:
   user_id: 
   post_id: 
-  comment: MyString
+  content: MyString
 
 two:
   user_id: 
   post_id: 
-  comment: MyString
+  content: MyString
