@@ -70,9 +70,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def add_like
-  end
-
   private
 
   def post_params

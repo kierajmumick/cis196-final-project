@@ -13,7 +13,11 @@
 					<%= post.caption %>
 				</div>
 				<div class='edit-options'>
-					<%= link_to 'Like', new_post_like_path(post) %>
+					<% if post.user_likes.include? current_user %>
+						<%= link_to 'Unlike', new_post_like_path(post) %>
+					<% else %>
+						<%= link_to 'Like', new_post_like_path(post) %>
+					<% end %>
 				</div>
 			</div>
 		</div>

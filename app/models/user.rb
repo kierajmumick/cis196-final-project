@@ -2,9 +2,9 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
+
   has_many :likes, dependent: :destroy
-  has_many :comments, dependent: :destroy
-  has_many :likes_users, :through => :likes, :class_name => 'Post'
+  has_many :liked_posts, source: :post, through: :likes
 
   validates :name, presence: true, length: { minimum: 2 }
   validates :email, presence: true
