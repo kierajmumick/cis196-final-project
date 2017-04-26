@@ -10,6 +10,18 @@
 		</div>
 
 		<div class='image-footer'>
+			<div class='edit-options'>
+				<% if @post.user_likes.include? current_user %>
+					<%= link_to '☻', new_post_like_path(@post), { :class => "like-active" } %>
+				<% else %>
+					<%= link_to '☺', new_post_like_path(@post), { :class => "like-inactive" } %>
+				<% end %>
+				<% if @post.user_likes.size == 1%>
+					<%= "#{@post.user_likes.size} like" %>
+				<% else %>
+					<%= "#{@post.user_likes.size} likes" %>
+				<% end %>
+			</div>
 			<div class='caption'>
 				<%= @post.caption %>
 			</div>

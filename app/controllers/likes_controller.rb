@@ -6,6 +6,6 @@ class LikesController < ApplicationController
 		else
 			post.user_likes.append current_user
 		end
-		redirect_to posts_path
+		redirect_to post_path(post)
 	end
 end

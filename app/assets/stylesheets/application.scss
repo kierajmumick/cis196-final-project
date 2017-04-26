@@ -56,6 +56,20 @@ body {
 
 	.image-footer {
 		padding: 14px;
+
+		.edit-options {
+			font-weight: 500;
+			color: #444;
+
+			a:hover {
+				text-decoration: none;
+			}
+
+			a {
+				font-size: 15px;
+				color: #007acc;
+			}
+		}
 	}
 }
 
